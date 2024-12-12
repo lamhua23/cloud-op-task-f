@@ -1,9 +1,9 @@
 <?php
 // Fetch RDS endpoint and credentials from environment variables
-$host = task-f-1-rdsinstance-cjbj1cbcgnvg.c8jbllertk8v.us-east-1.rds.amazonaws.com;
-$dbname = task-f-1-rdsinstance-cjbj1cbcgnvg;
-$username = admin;
-$password = Doc123456789;
+$host = getenv('DB_HOST');
+$dbname = getenv('DB_NAME');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
 
 if (!$host || !$dbname || !$username || !$password) {
     die("Environment variables for database configuration are not set.");
